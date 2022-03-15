@@ -1,0 +1,37 @@
+/* html {
+  background-image: url(/img/SeekPng.com_building-png_133022.png);
+  background-position: center;
+  image-rendering: optimizeSpeed;
+  background-repeat: space;
+} */
+
+.playArea {
+  width: 500px;
+  height: 750px;
+  position: absolute;
+  border: 1px solid black;
+}
+
+.sky {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  background-color: skyblue;
+}
+
+.ground {
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  background-color: brown;
+  /* background-image: url(/img/SeekPng.com_building-png_133022.png); */
+  top: 500px;
+}
+
+.bird {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  /* background-image: url(/img/ahh.png); */
+}
