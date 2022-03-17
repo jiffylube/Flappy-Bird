@@ -7,12 +7,12 @@ let playArea = document.querySelector('.playArea')
 let ground = document.querySelector('.ground')
 let sky = document.querySelector('.sky')
 let newGame = document.querySelector('.newGame')
-
+console.log(ground.getBoundingClientRect())
 
 //position bird
 let birdLeft = 220;
 let birdBottom = 150;
-let gravity = 2;
+let gravity = 3;
 
 //startGame , bird will fall, with interval set
 let startGame = function () {
@@ -28,7 +28,7 @@ let jump = function () {
     birdBottom += 50;
     bird.style.bottom = birdBottom + 'px'
     // bird.style.maxHeight = window.innerHeight;
-    console.log(birdBottom);
+    // console.log(birdBottom);
   }
 }
 
@@ -55,13 +55,22 @@ let makePoles = function () {
   obstacle.style.top = randomHeight
   
   // move the created poles   
-  let movePoles = function () {
-    obstacleLeft -= 2;
-    obstacle.style.left = obstacleLeft + 'px'
+  movePoles = function () {
+    if (obstacleLeft === 0) {
+      obstacle.remove()
+    }
+    else {
+      obstacleLeft -= 2;
+      obstacle.style.left = obstacleLeft + 'px'
+    }
   }
   
   setInterval(movePoles , 20)
 }
 
-// let timeID = setInterval(startGame, 20);
-// setInterval(makePoles , 1400)
+
+let timeID = setInterval(() => {
+  //compare players y to 509
+  startGame();
+}, 20);
+setInterval(makePoles , 1400)

@@ -4,6 +4,10 @@
   image-rendering: optimizeSpeed;
   background-repeat: space;
 } */
+* {
+  transition: all 0.1s ease;
+  border: 1px solid red;
+}
 
 .playArea {
   width: 500px;
@@ -29,7 +33,7 @@
 }
 
 .bird {
-  /* z-index: 1; */
+  z-index: 1;
   position: absolute;
   width: 50px;
   height: 50px;
@@ -39,7 +43,7 @@
 
 .pole {
   background-color: grey;
-  width: 30px;
+  width: 60px;
   height: 300px;
   position: absolute;
 }
