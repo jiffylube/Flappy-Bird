@@ -17,18 +17,18 @@ let startGame = function () {
   let birdLeft = 220;
   let birdBottom = 150;
   let gravity = 3;
-  
+
   //startGame , bird will be placed, with number of pixels specificed
   let birdFall = function () {
     birdBottom -= gravity;
     bird.style.bottom = birdBottom + 'px';
     bird.style.left = birdLeft + 'px';
-
+ 
     if (birdBottom <= 0) {
-      console.log('hit bottom');
-      clearInterval(birdFallInterval);
-      clearInterval(makePollInterval)
-      //GameOver
+      // console.log('hit bottom');
+      // clearInterval(birdFallInterval);
+      // clearInterval(makePollInterval)
+      gameOver();
     }
   }
 
@@ -79,11 +79,13 @@ let startGame = function () {
     setInterval(movePoles, 20)
   }
 
-  //game over conditions
+  //game over
 
-  // let gameOver = function () {
-  //   clearInterval(startGame)
-  // }
+  let gameOver = function () {
+    console.log('hit bottom');
+    clearInterval(birdFallInterval);
+    clearInterval(makePollInterval)
+  }
 
   let birdFallInterval = setInterval(birdFall , 20)
   let makePollInterval = setInterval(makePoles, 2000)
