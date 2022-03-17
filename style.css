@@ -5,7 +5,7 @@
   background-repeat: space;
 } */
 * {
-  transition: all 0.1s ease;
+  /* transition: all 0.1s ease; */
   border: 1px solid red;
 }
 
@@ -37,7 +37,7 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  /* background-color: yellow; */
+  background-color: yellow;
   /* border-radius: 50%; */
 }
 
@@ -46,4 +46,8 @@
   width: 60px;
   height: 300px;
   position: absolute;
+}
+
+button {
+  cursor: pointer;
 }
